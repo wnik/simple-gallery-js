@@ -270,7 +270,7 @@
 					offsetTop = 0;
 
 					for (let k = 0; k < i; ++k) {
-						offsetTop += this.itemsArray[k][j].children[0].getBoundingClientRect().height;
+						offsetTop += this.itemsArray[k][j].offsetHeight;
 					};
 					
 					this.itemsArray[i][j].style.top = `${offsetTop}px`;
