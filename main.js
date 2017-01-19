@@ -67,6 +67,7 @@
 		this.options = options || {};
 		this.containerWidth = 0;
 		this.isFullWidth = false;
+		this.barWidth = 17;
 
 		this.defaults = {
 				container: false,
@@ -88,13 +89,13 @@
 		let self = this;
 
 		utils.ready(function() {
-			self.toggle();
+
 
 			self.setDefaultsKeys();
 
 			self.checkOptions(function() {
 
-				self.toggle();
+
 
 				self.calculateRows();
 				self.setStyles();
@@ -169,7 +170,7 @@
 
 			if (highestColumn > document.body.clientHeight) {
 
-				this.containerWidth -= 17 + this.options.space;
+				this.containerWidth -= this.barWidth + this.options.space;
 				
 				this.setItemWidth(this.containerWidth);
 
