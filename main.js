@@ -271,9 +271,9 @@
 
 					for (let k = 0; k < i; ++k) {
 						offsetTop += this.itemsArray[k][j].offsetHeight;
-						console.log(this.itemsArray[k][j]);
 					};
 					
+					console.log(offsetTop);
 					this.itemsArray[i][j].style.top = `${offsetTop}px`;
 				};
 			};
