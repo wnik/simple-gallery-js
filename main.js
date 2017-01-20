@@ -268,7 +268,7 @@
 					offsetTop = 0;
 
 					for (let k = 0; k < i; ++k) {
-						offsetTop += (this.options.itemWidth / this.itemsArray[k][j].children[0].naturalWidth) * this.itemsArray[k][j].children[0].naturalHeight;
+						offsetTop += this.itemsArray[k][j].offsetHeight;
 					};
 					
 					this.itemsArray[i][j].style.top = `${offsetTop}px`;
