@@ -270,6 +270,7 @@
 					offsetTop = 0;
 
 					for (let k = 0; k < i; ++k) {
+						console.log(this.options.itemWidth, this.itemsArray[k][j].children[0].naturalWidth);
 						offsetTop += (this.options.itemWidth / this.itemsArray[k][j].children[0].naturalWidth) * this.itemsArray[k][j].children[0].naturalHeight;
 					};
 					
