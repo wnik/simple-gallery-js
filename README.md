@@ -19,7 +19,6 @@ JavaScript:
 ```
 
 HTML:
-> Gallery item must have class ".gallery-item"
 ```
 <div id="gallery-container">
   <a class="gallery-item" href="#">
@@ -28,3 +27,4 @@ HTML:
   ... more items
 </div>
 ```
+Gallery item must have class ".gallery-item"
