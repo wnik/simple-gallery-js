@@ -6,9 +6,9 @@
 
 	/**
 	 * 
-	 * Listen when DOM is loaded
+	 * Listen when everything is loaded
 	 * 
-	 * @param  {Function} callback Called when DOM is loaded
+	 * @param  {Function} callback Called after load
 	 * 
 	 */
 	utils.ready = function(callback) {
