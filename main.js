@@ -270,10 +270,9 @@
 					offsetTop = 0;
 
 					for (let k = 0; k < i; ++k) {
-						offsetTop += this.itemsArray[k][j].offsetHeight;
+						offsetTop += (this.options.itemWidth / this.itemsArray[k][j].children[0].naturalWidth) * this.itemsArray[k][j].children[0].naturalHeight;
 					};
 					
-					console.log(offsetTop);
 					this.itemsArray[i][j].style.top = `${offsetTop}px`;
 				};
 			};
