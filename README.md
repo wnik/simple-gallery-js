@@ -1,7 +1,7 @@
 # simple-gallery-js
 Simplery - gallery javascript
 
-### How to use
+## How to use
 
 JavaScript:
 ```
