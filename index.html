@@ -4,6 +4,15 @@
 	<title>Simple Gallery - JavaScript</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="main.js"></script>
+	<script>
+		const gallery = new Simplery({
+			container: '#gallery-container',
+			itemsPerRow: 6,
+			space: 10,
+			itemWidth: 320
+		});
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -81,15 +90,7 @@
 				<img src="images/24.jpg">
 			</a>	
 		</div>
+		<p class="widthInfo"></p>
 	</div>
-	<script src="main.js"></script>
-	<script>
-		const gallery = new Simplery({
-			container: '#gallery-container',
-			itemsPerRow: 6,
-			space: 10,
-			itemWidth: 320
-		});
-	</script>
 </body>
 </html>

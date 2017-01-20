@@ -90,10 +90,14 @@
 
 		utils.ready(function() {
 
-
 			self.setDefaultsKeys();
 
 			self.checkOptions(function() {
+
+				let info = utils.qs('.widthInfo');
+
+				let t = document.createTextNode(self.getCurrentWidth());
+				info.appendChild(t);
 
 				self.calculateRows();
 				self.setStyles();
