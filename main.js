@@ -11,7 +11,7 @@
 	 * 
 	 */
 	utils.ready = function(callback) {
-		document.addEventListener('DOMContentLoaded', callback);
+		window.addEventListener('load', callback);
 	};
 
 	/**
