@@ -42,7 +42,7 @@
 	 * Avoid calling function too often
 	 * 
 	 * @param  {Function} fn    Function to call
-	 * @param  {[type]}   delay Delay after fn is called
+	 * @param  {int}      delay Delay after fn is called
 	 * 
 	 */
 	utils.debounce = function(fn, delay) {
