@@ -5,6 +5,7 @@
 	let utils = {};
 
 	/**
+	 * 
 	 * Listen when DOM is loaded
 	 * 
 	 * @param  {Function} callback Called when DOM is loaded
@@ -15,6 +16,7 @@
 	};
 
 	/**
+	 * 
 	 * querySelector wrapper
 	 * 
 	 * @param  {string} selector Selector name
@@ -27,6 +29,7 @@
 	};
 
 	/**
+	 * 
 	 * querySelectorAll wrapper
 	 * 
 	 * @param  {string} selector Selector name
@@ -39,9 +42,11 @@
 	};
 
 	/**
+	 * 
 	 * Avoid calling function too often
 	 * 
 	 * @param  {Function} fn    Function to call
+	 * 
 	 * @param  {int}      delay Delay after fn is called
 	 * 
 	 */
@@ -70,10 +75,10 @@
 		this.barWidth = 17;
 
 		this.defaults = {
-				container: false,
-				itemsPerRow: 4,
-				space: 0,
-				itemWidth: 320
+			container: false,
+			itemsPerRow: 4,
+			space: 0,
+			itemWidth: 320
 		};
 
 		this.init();
@@ -82,6 +87,7 @@
 	let proto = SimpleGallery.prototype;
 
 	/**
+	 * 
 	 * Initialize all the methods
 	 * 
 	 */
@@ -94,11 +100,6 @@
 
 			self.checkOptions(function() {
 
-				let info = utils.qs('.widthInfo');
-
-				let t = document.createTextNode(self.getCurrentWidth());
-				info.appendChild(t);
-
 				self.calculateRows();
 				self.setStyles();
 				self.calculatePositions();
@@ -109,6 +110,7 @@
 	};
 
 	/**
+	 * 
 	 * Set default keys if not beeing set
 	 * 
 	 */
@@ -120,6 +122,7 @@
 	};
 
 	/**
+	 * 
 	 * Check if option container has been set
 	 * 
 	 * @param  {Function} callback Called when container and items was found
@@ -137,6 +140,7 @@
 	};
 
 	/**
+	 * 
 	 * Set styles for the container and items
 	 * 
 	 */
@@ -186,6 +190,7 @@
 	};
 
 	/**
+	 * 
 	 * Set new width for the option itemWidth  
 	 * 
 	 * @param {int} maxWidth Actual window width
@@ -204,6 +209,7 @@
 	};
 
 	/**
+	 * 
 	 * Create new two dimensional array and fills it with Items
 	 * 
 	 */
@@ -227,12 +233,13 @@
 
 			let row = Math.floor(index / this.cols);
 			let col = index % this.cols;
-			console.log(element.children[0].naturalWidth);
+
 			this.itemsArray[row][col] = element;
 		});
 	};
 
 	/**
+	 * 
 	 * Calculate positions for each item in two dimensional array
 	 * 
 	 */
@@ -282,6 +289,7 @@
 	};
 
 	/**
+	 * 
 	 * Return highest column of itemsArray
 	 * 
 	 * @return {int} Number in pixels of highest column
@@ -310,17 +318,7 @@
 	};
 
 	/**
-	 * Return max height with addition of option space for each row
 	 * 
-	 * @return {int} Number in pixels of max height
-	 * 
-	 */
-	// proto.getMaxHeight = function() {
-	// 	return (this.getHighestColumn() + (this.options.space * this.rows) + this.options.space);
-	// };
-
-
-	/**
 	 * Set styles for each item
 	 * 
 	 * @param {int} width Actual width of the item
@@ -338,6 +336,7 @@
 	};
 
 	/**
+	 * 
 	 * Check if container has CSS style width defined
 	 * 
 	 * @return {boolean} 
@@ -348,6 +347,7 @@
 	};
 
 	/**
+	 * 
 	 * Get gallery container width or document width;
 	 * 
 	 * @return {int} Current document width
@@ -358,6 +358,7 @@
 	};
 
 	/**
+	 * 
 	 * Reset item width and set new positions
 	 * 
 	 */
@@ -367,15 +368,6 @@
 		this.calculatePositions();
 	};
 
-	proto.toggle = function() {
-		let items = utils.qsa('.gallery-item');
-
-		if (items) {
-			items.forEach (function(element) {
-				element.style.display = element.style.display == 'block' ? 'none' : 'block';
-			});
-		};
-	};
 
 	window.Simplery = SimpleGallery;
 
