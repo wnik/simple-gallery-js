@@ -2,6 +2,7 @@
 Simplery - gallery javascript
 
 ### How to use
+
 JavaScript:
 ```
 <head>
