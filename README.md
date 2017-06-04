@@ -1,6 +1,9 @@
 # simple-gallery-js
 Simplery - gallery javascript
 
+## Demo
+https://wnik.github.io/simple-gallery-js/
+
 ## How to use
 
 JavaScript:
